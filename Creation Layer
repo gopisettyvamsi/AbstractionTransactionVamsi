@@ -1,0 +1,24 @@
+package creation;
+
+import implementation.Atm;
+import implementation.User;
+import implementation.Web;
+
+public class Transaction2 {
+	public User factory (int pin)
+	{
+		if (pin==1111) {
+			System.out.println("user has chosen Atm to withdraw money");
+			Atm atm=new Atm();
+			return atm;
+		}
+		else {
+			System.out.println("user has chosen web to withdraw money");
+			Web web= new Web();
+			return  web;
+			
+		}
+		
+	}
+
+}
