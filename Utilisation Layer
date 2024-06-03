@@ -1,0 +1,30 @@
+package utilisation;
+
+import java.util.Scanner;
+
+import creation.Transaction2;
+import implementation.User;
+
+public class UserDriver {
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println("eneter the mode of payment");
+		System.out.println("enter 0000 or 1111 to choose ");
+		int pin = s.nextInt();
+		if(pin==1111 || pin==0000)
+		{
+			Transaction2 transaction2 = new Transaction2();
+			User user = transaction2.factory(pin);
+			user.transaction();
+			
+		}
+		else {
+			System.out.println("invalid choice");
+		}
+		
+		
+		
+	}
+
+
+}
