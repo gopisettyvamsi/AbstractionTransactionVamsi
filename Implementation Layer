@@ -1,0 +1,24 @@
+package implementation;
+public interface User {
+	public void transaction();
+}
+package implementation;
+public class Atm implements User{
+	@Override
+	public void transaction()
+	{
+		System.out.println("money transferred through ATM");
+	}
+}
+package implementation;
+public class Web implements User {
+	public void transaction()
+	{
+		System.out.println("money transferred through WEB");
+	}
+}
+
+
+
+
+
